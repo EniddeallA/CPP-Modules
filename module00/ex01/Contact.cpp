@@ -6,22 +6,36 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 09:14:57 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/12 10:18:30 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/13 01:18:37 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact()
+Contact::Contact(void)
 {
 	std::cout << "\033[1;32mContact successfully created\033[0m" << std::endl;
-	return ;
 }
 
-Contact::~Contact()
+Contact::Contact(
+				std::string first_name,
+				std::string last_name,
+				std::string nickname,
+				std::string number,
+				std::string secret
+				):
+				first_name(first_name),
+				last_name(last_name),
+				nickname(nickname),
+				number(number),
+				secret(secret)
+{
+	std::cout << "\033[1;32mContact successfully created\033[0m" << std::endl;
+}
+
+Contact::~Contact(void)
 {
 	std::cout << "\033[1;31mContact successfully destroyed\033[0m" << std::endl;
-	return ;
 }
 
 void Contact::setfirstname(std::string firstname)
@@ -36,7 +50,7 @@ void Contact::setnickname(std::string nickname)
 {
 	this->nickname = nickname;
 }
-void Contact::setnumber(int number)
+void Contact::setnumber(std::string number)
 {
 	this->number = number;
 }
@@ -57,7 +71,7 @@ std::string Contact::getnickname(void)
 {
 	return this->nickname;
 }
-int Contact::getnumber(void)
+std::string Contact::getnumber(void)
 {
 	return this->number;
 }
