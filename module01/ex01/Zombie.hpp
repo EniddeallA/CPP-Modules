@@ -6,9 +6,12 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 04:17:18 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/14 08:12:26 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/14 11:11:16 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
 #include "iostream"
 
@@ -25,3 +28,5 @@ class Zombie
 	private:
 		std::string name;
 };
+
+#endif
