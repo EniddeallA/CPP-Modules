@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eniddealla <eniddealla@student.42.fr>      +#+  +:+       +#+        */
+/*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 09:14:55 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/13 08:11:20 by eniddealla       ###   ########.fr       */
+/*   Updated: 2022/03/14 02:50:46 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void PhoneBook::ADD(void)
 	if (this->size < 8)
 		this->size++;
 	this->index = (this->index + 1) % 8;
-	std::cout << "Contact has been added successfully." << std::endl;
+	std::cout << "\033[1;32mContact has been added successfully.\033[0m" << std::endl;
 }
 
 void PhoneBook::printfield(std::string value)
@@ -80,7 +80,7 @@ void PhoneBook::display_contacts(void)
 		i++;
 	}
 	if (!this->size)
-		std::cout << "Phonebook is empty." << std::endl;
+		std::cout << "\033[1;31mPhonebook is empty.\033[0m" << std::endl;
 }
 
 void PhoneBook::display_contact(int i)
