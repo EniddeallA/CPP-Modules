@@ -5,18 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/14 04:16:14 by akhalid           #+#    #+#              #
-#    Updated: 2022/03/14 07:12:14 by akhalid          ###   ########.fr        #
+#    Created: 2022/03/14 07:48:27 by akhalid           #+#    #+#              #
+#    Updated: 2022/03/14 07:54:39 by akhalid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=			BraiiiiiiinnnzzzZ
+NAME	=			moarbrainz
 CPP 	= 			c++
 FLAGS 	= 			-std=c++98 -Wall -Wextra -Werror -g
 SRCS	=			main.cpp	\
 					Zombie.cpp	\
-					newZombie.cpp	\
-					randomChump.cpp	
+					zombieHorde.cpp
 
 all		: 			$(NAME)
 

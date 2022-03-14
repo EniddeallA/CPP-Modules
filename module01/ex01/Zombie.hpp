@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/14 04:17:23 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/14 07:43:26 by akhalid          ###   ########.fr       */
+/*   Created: 2022/03/14 04:17:18 by akhalid           #+#    #+#             */
+/*   Updated: 2022/03/14 08:12:26 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "iostream"
 
-#include "Zombie.hpp"
-
-void randomChump( std::string name )
+class Zombie
 {
-	Zombie z(name);
-	z.announce();
-}
+	public:
+		Zombie( void );
+		Zombie( std::string name );
+		~Zombie( void );
+		std::string getName( void );
+		void setName( std::string name );
+		void announce( void );
+	
+	private:
+		std::string name;
+};

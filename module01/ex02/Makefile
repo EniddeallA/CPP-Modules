@@ -5,18 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/14 04:16:14 by akhalid           #+#    #+#              #
-#    Updated: 2022/03/14 07:12:14 by akhalid          ###   ########.fr        #
+#    Created: 2022/03/14 08:17:33 by akhalid           #+#    #+#              #
+#    Updated: 2022/03/14 08:17:47 by akhalid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=			BraiiiiiiinnnzzzZ
+NAME	=			thisisbrain
 CPP 	= 			c++
 FLAGS 	= 			-std=c++98 -Wall -Wextra -Werror -g
-SRCS	=			main.cpp	\
-					Zombie.cpp	\
-					newZombie.cpp	\
-					randomChump.cpp	
+SRCS	=			main.cpp
 
 all		: 			$(NAME)
 
