@@ -6,12 +6,12 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 08:18:53 by eniddealla        #+#    #+#             */
-/*   Updated: 2022/03/14 01:30:11 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/14 03:13:23 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
-#include <ctime>
+#include <time.h>
 #include <iostream>
 #include <iomanip>
 
@@ -68,24 +68,6 @@ void	Account::displayAccountsInfos( void ) {
 				<< std::endl;
 }
 
-void	Account::_displayTimestamp( void ) {
-	time_t		ttime;
-	struct tm	*tm;
-
-	time(&ttime);
-	tm = localtime(&ttime);
-
-	std::cout << "[";
-	std::cout << std::setfill('0') << std::setw(4) << tm->tm_year + 1900;
-	std::cout << std::setfill('0') << std::setw(2) << tm->tm_mon;
-	std::cout << std::setfill('0') << std::setw(2) << tm->tm_mday;
-	std::cout << "_";
-	std::cout << std::setfill('0') << std::setw(2) << tm->tm_hour;
-	std::cout << std::setfill('0') << std::setw(2) << tm->tm_min;
-	std::cout << std::setfill('0') << std::setw(2) << tm->tm_sec;
-	std::cout << "]";
-}
-
 void	Account::makeDeposit( int deposit ) {
 	int	const	_prev_amount = _amount;
 
@@ -138,4 +120,22 @@ void	Account::displayStatus( void ) const {
 				<< "deposits:" << _nbDeposits << ';'
 				<< "withdrawals:" << _nbWithdrawals
 				<< std::endl;
+}
+
+void	Account::_displayTimestamp( void ) {
+	time_t		ttime;
+	struct tm	*tm;
+
+	time(&ttime);
+	tm = localtime(&ttime);
+
+	std::cout << "[";
+	std::cout << std::setfill('0') << std::setw(4) << tm->tm_year + 1900;
+	std::cout << std::setfill('0') << std::setw(2) << tm->tm_mon + 1;
+	std::cout << std::setfill('0') << std::setw(2) << tm->tm_mday;
+	std::cout << "_";
+	std::cout << std::setfill('0') << std::setw(2) << tm->tm_hour;
+	std::cout << std::setfill('0') << std::setw(2) << tm->tm_min;
+	std::cout << std::setfill('0') << std::setw(2) << tm->tm_sec;
+	std::cout << "]";
 }
