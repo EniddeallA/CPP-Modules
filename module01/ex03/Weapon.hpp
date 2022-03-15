@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 11:09:20 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/14 11:29:07 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/15 10:13:49 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Weapon
 		Weapon( void );
 		Weapon( std::string type );
 		~Weapon( void );
-		const std::string &getType( void );
+		std::string getType( void );
 		void setType(std::string type);
 		
 	private:
