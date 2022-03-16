@@ -3,19 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
+/*   By: eniddealla <eniddealla@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 09:14:57 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/13 01:18:37 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/13 05:55:34 by eniddealla       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
 Contact::Contact(void)
-{
-	std::cout << "\033[1;32mContact successfully created\033[0m" << std::endl;
-}
+{}
 
 Contact::Contact(
 				std::string first_name,
@@ -29,14 +27,10 @@ Contact::Contact(
 				nickname(nickname),
 				number(number),
 				secret(secret)
-{
-	std::cout << "\033[1;32mContact successfully created\033[0m" << std::endl;
-}
+{}
 
 Contact::~Contact(void)
-{
-	std::cout << "\033[1;31mContact successfully destroyed\033[0m" << std::endl;
-}
+{}
 
 void Contact::setfirstname(std::string firstname)
 {
