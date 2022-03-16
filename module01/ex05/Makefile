@@ -3,17 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+         #
+#    By: eniddealla <eniddealla@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/15 13:03:23 by akhalid           #+#    #+#              #
-#    Updated: 2022/03/17 00:31:17 by akhalid          ###   ########.fr        #
+#    Created: 2022/03/16 15:15:55 by eniddealla        #+#    #+#              #
+#    Updated: 2022/03/16 15:16:07 by eniddealla       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=			sed
+NAME	=			karen
 CPP 	= 			c++
 FLAGS 	= 			-std=c++98 -Wall -Wextra -Werror -g
-SRCS	=			main.cpp 
+SRCS	=			main.cpp \
+					karen.cpp 
 
 all		: 			$(NAME)
 
@@ -27,4 +28,4 @@ clean	:
 fclean	:			clean
 					@rm -rf $(NAME)
 
-re		:			fclean all
+re		:			fclean all	

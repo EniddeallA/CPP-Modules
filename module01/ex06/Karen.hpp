@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eniddealla <eniddealla@student.42.fr>      +#+  +:+       +#+        */
+/*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/12 09:14:52 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/16 10:43:50 by eniddealla       ###   ########.fr       */
+/*   Created: 2022/03/16 15:23:19 by akhalid           #+#    #+#             */
+/*   Updated: 2022/03/16 15:44:01 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#ifndef KAREN_HPP
+# define KAREN_HPP
 
 #include "iostream"
-#include <iomanip>
 
-int main()
+class Karen
 {
-	PhoneBook pb;
-	pb.execute();
-	return (0);
-}
+	public:
+		Karen( void );
+		~Karen( void );
+		void complain( std::string level );
+
+	private:
+		void debug( void );
+		void info( void );
+		void warning( void );
+		void error( void );
+};
+
+#endif

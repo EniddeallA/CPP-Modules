@@ -3,21 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eniddealla <eniddealla@student.42.fr>      +#+  +:+       +#+        */
+/*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/12 09:14:52 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/16 10:43:50 by eniddealla       ###   ########.fr       */
+/*   Created: 2022/03/16 15:16:22 by akhalid        #+#    #+#             */
+/*   Updated: 2022/03/16 15:17:33 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
-
-#include "iostream"
-#include <iomanip>
+#include "Karen.hpp"
 
 int main()
 {
-	PhoneBook pb;
-	pb.execute();
+	Karen k;
+
+	k.complain("DEBUG");
+	k.complain("INFO");
+	k.complain("WARNING");
+	k.complain("ERROR");
+	k.complain("tkharbi9a");
 	return (0);
 }
