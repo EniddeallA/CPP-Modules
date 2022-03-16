@@ -6,14 +6,13 @@
 /*   By: eniddealla <eniddealla@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 09:14:57 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/13 05:55:34 by eniddealla       ###   ########.fr       */
+/*   Updated: 2022/03/16 10:43:45 by eniddealla       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact(void)
-{}
+Contact::Contact(void){}
 
 Contact::Contact(
 				std::string first_name,
@@ -29,8 +28,7 @@ Contact::Contact(
 				secret(secret)
 {}
 
-Contact::~Contact(void)
-{}
+Contact::~Contact(void){}
 
 void Contact::setfirstname(std::string firstname)
 {

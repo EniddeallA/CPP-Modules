@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/12 02:17:12 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/14 01:52:35 by akhalid          ###   ########.fr       */
+/*   Created: 2022/03/14 08:17:25 by akhalid           #+#    #+#             */
+/*   Updated: 2022/03/14 09:16:44 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iostream"
+#include <iostream>
 
-int main(int argc, char **argv)
+int main()
 {
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	else
-		for (int j = 1; j < argc; j++)
-		{
-			for (int i = 0; i < (int)strlen(argv[j]); i++)
-			{
-				std::cout << (char)toupper(argv[j][i]);
-			}
-		}
+	std::string str = "HI THIS IS BRAIN";
+	std::string *stringPTR = &str;
+	std::string &stringREF = str;
+
+	std::cout << &str << std::endl;
+	std::cout << stringPTR << std::endl;
+	std::cout << &stringREF << std::endl;
+	
 	std::cout << std::endl;
+	
+	std::cout << str << std::endl;
+	std::cout << *stringPTR << std::endl;
+	std::cout << stringREF << std::endl;
 	return (0);
 }

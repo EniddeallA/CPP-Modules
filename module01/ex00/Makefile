@@ -5,20 +5,24 @@
 #                                                     +:+ +:+         +:+      #
 #    By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/14 01:43:50 by akhalid           #+#    #+#              #
-#    Updated: 2022/03/14 01:43:51 by akhalid          ###   ########.fr        #
+#    Created: 2022/03/14 04:16:14 by akhalid           #+#    #+#              #
+#    Updated: 2022/03/14 07:12:14 by akhalid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=			megaphone
+NAME	=			BraiiiiiiinnnzzzZ
 CPP 	= 			c++
-FLAGS 	= 			-std=c++98 -Wall -Wextra -Werror
-SRCS	=			megaphone.cpp
+FLAGS 	= 			-std=c++98 -Wall -Wextra -Werror -g
+SRCS	=			main.cpp	\
+					Zombie.cpp	\
+					newZombie.cpp	\
+					randomChump.cpp	
 
 all		: 			$(NAME)
 
 $(NAME)	:			$(SRCS)
 					@$(CPP) $(FLAGS) $(SRCS) -o $(NAME)
+					@rm -rf *.dSYM
 
 clean	:			
 					@rm -rf *.o
