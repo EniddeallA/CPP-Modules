@@ -5,15 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/15 13:03:23 by akhalid           #+#    #+#              #
-#    Updated: 2022/03/18 14:43:28 by akhalid          ###   ########.fr        #
+#    Created: 2022/03/18 14:29:23 by akhalid           #+#    #+#              #
+#    Updated: 2022/03/18 15:19:21 by akhalid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=			sed
+NAME	=			fixed
 CPP 	= 			c++
 FLAGS 	= 			-std=c++98 -Wall -Wextra -Werror -g
-SRCS	=			main.cpp 
+SRCS	=			main.cpp \
+					fixed.cpp 
 
 all		: 			$(NAME)
 
@@ -27,4 +28,4 @@ clean	:
 fclean	:			clean
 					@rm -rf $(NAME)
 
-re		:			fclean all
+re		:			fclean all	
