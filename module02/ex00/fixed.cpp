@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:47:56 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/18 15:36:03 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/21 12:15:35 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Fixed& Fixed::operator=(const Fixed& f )
 
 Fixed::~Fixed()
 {
-	std::cout << "\033[1;31mDefault constructor called\033[0m" << std::endl;
+	std::cout << "\033[1;31mDestructor called\033[0m" << std::endl;
 }
 
 int Fixed::getRawBits( void ) const

@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:47:51 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/21 12:10:42 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/21 15:45:19 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,35 @@ class Fixed
 		Fixed( const int number );
 		Fixed( const float number );
 		Fixed( const Fixed& f );
-		Fixed& operator=(const Fixed& f );
 		~Fixed();
+
+		Fixed& operator = (const Fixed& f );
+
+		Fixed operator + (const Fixed& f ) const;
+		Fixed operator - (const Fixed& f ) const;
+		Fixed operator * (const Fixed& f ) const;
+		Fixed operator / (const Fixed& f ) const;
+		
+		Fixed& operator ++ ( void ); /* Pre-Increment */
+		Fixed& operator -- ( void ); /* Pre-Decrement */
+		Fixed  operator ++ ( int ); /* Post-Increment */
+		Fixed  operator -- ( int ); /* Post-De	crement */
+
+		bool operator == (const Fixed& f ) const;
+		bool operator != (const Fixed& f ) const;		
+		bool operator >  (const Fixed& f ) const;
+		bool operator <  (const Fixed& f ) const;
+		bool operator >= (const Fixed& f ) const;
+		bool operator <= (const Fixed& f ) const;
 
 		int getRawBits( void ) const;
 		void setRawBits( int const raw );
 
 		float toFloat( void ) const;
 		int toInt( void ) const;
+
+		static const Fixed& min(const Fixed& f1, const Fixed& f2);
+		static const Fixed& max(const Fixed& f1, const Fixed& f2);
 
 	private:
 		int number;

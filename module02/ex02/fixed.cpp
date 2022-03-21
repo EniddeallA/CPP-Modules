@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:47:56 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/21 22:05:57 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/21 13:03:09 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,74 @@ std::ostream& operator<<(std::ostream &output, const Fixed& f)
 {
 	output << f.toFloat();
 	return output;
+}
+
+Fixed Fixed::operator + (const Fixed& f ) const
+{
+
+}
+
+Fixed Fixed::operator - (const Fixed& f ) const
+{
+
+}
+
+Fixed Fixed::operator * (const Fixed& f ) const
+{
+
+}
+
+Fixed Fixed::operator / (const Fixed& f ) const
+{
+
+}
+
+Fixed& Fixed::operator ++ ( void )
+{
+	
+}
+
+Fixed& Fixed::operator -- ( void )
+{
+	
+}
+
+Fixed  Fixed::operator ++ ( int )
+{
+	
+}
+
+Fixed  Fixed::operator -- ( int )
+{
+	
+}
+
+bool Fixed::operator == (const Fixed& f ) const
+{
+	
+}
+
+bool Fixed::operator != (const Fixed& f ) const
+{
+
+}
+
+bool Fixed::operator >  (const Fixed& f ) const
+{
+
+}
+
+bool Fixed::operator <  (const Fixed& f ) const
+{
+
+}
+
+bool Fixed::operator >= (const Fixed& f ) const
+{
+
+}
+
+bool Fixed::operator <= (const Fixed& f ) const
+{
+
 }
