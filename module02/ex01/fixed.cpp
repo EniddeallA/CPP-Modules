@@ -6,12 +6,11 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:47:56 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/21 22:05:57 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/21 22:06:39 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fixed.hpp"
-
 
 Fixed::Fixed( void ):
 	number(0)
