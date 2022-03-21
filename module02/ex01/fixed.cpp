@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:47:56 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/18 15:36:03 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/20 14:06:16 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ Fixed::Fixed( void ):
 {
 	std::cout << "\033[1;32mDefault constructor called\033[0m" << std::endl;
 }
+
+// Fixed::Fixed( const int number );
+// Fixed::Fixed( const float number );
 
 Fixed::Fixed( const Fixed& f )
 {
@@ -47,4 +50,10 @@ void Fixed::setRawBits( int const raw )
 {
 	std::cout << "setRawBits member function called" << std::endl;
 	this->fixedPoint = raw;
+}
+
+std::ostream& operator<<(std::ostream &output, const Fixed& f)
+{
+	output << f.getRawBits();
+	return (output);
 }
