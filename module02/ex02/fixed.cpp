@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:47:56 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/21 13:03:09 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/21 23:19:07 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,39 +15,31 @@
 
 Fixed::Fixed( void ):
 	number(0)
-{
-	std::cout << "\033[1;32mDefault constructor called\033[0m" << std::endl;
-}
+{}
 
 Fixed::Fixed( const int number )
 {
-	std::cout << "\033[1;32mIntger constructor called\033[0m" << std::endl;
-	this->number = number << this->width;
+	this->number = (int)(number * pow(2, this->width));
 }
 
 Fixed::Fixed( const float number )
 {
-	std::cout << "\033[1;32mFloat constructor called\033[0m" << std::endl;
-	this->number = roundf(number * (1 << this->width));
-}	
+	this->number = roundf(number * pow(2, this->width));
+}
 
 Fixed::Fixed( const Fixed& f )
 {
-	std::cout << "\033[1;32mCopy constructor called\033[0m" << std::endl;
 	*this = f;
 }
 
 Fixed& Fixed::operator=(const Fixed& f )
 {
-	std::cout << "\033[1;32mCopy assignment operator called\033[0m" << std::endl;
 	this->number = f.getRawBits();
 	return *this;
 }
 
 Fixed::~Fixed()
-{
-	std::cout << "\033[1;31mDestructor called\033[0m" << std::endl;
-}
+{}
 
 int Fixed::getRawBits( void ) const
 {
@@ -60,11 +52,11 @@ void Fixed::setRawBits( int const raw )
 }
 
 float	Fixed::toFloat( void ) const {
-	return (float)this->number / (float)(1 << this->width);
+	return (float)this->number / pow(2, this->width);
 }
 
 int		Fixed::toInt( void ) const {
-	return this->number >> this->width;
+	return this->number / pow(2, this->width);
 }
 
 std::ostream& operator<<(std::ostream &output, const Fixed& f)
@@ -75,70 +67,98 @@ std::ostream& operator<<(std::ostream &output, const Fixed& f)
 
 Fixed Fixed::operator + (const Fixed& f ) const
 {
-
+	Fixed f1;
+	f1.setRawBits(this->number + f.number);
+	return f1;
 }
 
 Fixed Fixed::operator - (const Fixed& f ) const
 {
-
+	Fixed f1;
+	f1.setRawBits(this->number - f.number);
+	return f1;
 }
 
 Fixed Fixed::operator * (const Fixed& f ) const
 {
-
+	Fixed f1;
+	f1.setRawBits((this->number * f.number) / pow(2, this->width));
+	return f1;
 }
 
 Fixed Fixed::operator / (const Fixed& f ) const
 {
-
+	Fixed f1;
+	f1.setRawBits((this->number / f.number) * pow(2, this->width));
+	return f1;
 }
 
 Fixed& Fixed::operator ++ ( void )
 {
-	
+	this->number++;
+	return (*this);
 }
 
 Fixed& Fixed::operator -- ( void )
 {
-	
+	this->number--;
+	return (*this);
 }
 
 Fixed  Fixed::operator ++ ( int )
 {
-	
+	Fixed f(*this);
+	this->number++;
+	return (f);
 }
 
 Fixed  Fixed::operator -- ( int )
 {
-	
+	Fixed f(*this);
+	this->number--;
+	return (f);
 }
 
 bool Fixed::operator == (const Fixed& f ) const
 {
-	
+	return (this->number == f.number);
 }
 
 bool Fixed::operator != (const Fixed& f ) const
 {
-
+	return (this->number != f.number);
 }
 
 bool Fixed::operator >  (const Fixed& f ) const
 {
-
+	return (this->number > f.number);
 }
 
 bool Fixed::operator <  (const Fixed& f ) const
 {
-
+	return (this->number < f.number);
 }
 
 bool Fixed::operator >= (const Fixed& f ) const
 {
-
+	return (this->number >= f.number);
 }
 
 bool Fixed::operator <= (const Fixed& f ) const
 {
+	return (this->number <= f.number);
+}
 
+const Fixed& Fixed::min(const Fixed& f1, const Fixed& f2)
+{
+	if (f1 <= f2)
+		return (f1);
+	return (f2);
+}
+
+const Fixed& Fixed::max(const Fixed& f1, const Fixed& f2)
+{
+	if (f1 >= f2)
+		return (f1);
+	return (f2);
 }
