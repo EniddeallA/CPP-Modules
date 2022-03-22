@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:47:56 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/21 23:22:40 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/22 01:23:26 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,4 +161,32 @@ const Fixed& Fixed::max(const Fixed& f1, const Fixed& f2)
 	if (f1 >= f2)
 		return (f1);
 	return (f2);
+}
+
+Fixed& Fixed::min( Fixed& f1, Fixed& f2)
+{
+	if (f1 <= f2)
+		return (f1);
+	return (f2);
+}
+
+Fixed& Fixed::max( Fixed& f1, Fixed& f2)
+{
+	if (f1 >= f2)
+		return (f1);
+	return (f2);
+}
+
+Fixed Fixed::abs( Fixed& f )
+{
+	if (f < 0)
+		return (f * - 1);
+	return (f);
+}
+
+const Fixed Fixed::abs( const Fixed& f )
+{
+	if (f < 0)
+		return (f * - 1);
+	return (f);
 }

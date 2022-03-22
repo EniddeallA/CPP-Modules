@@ -6,11 +6,11 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:47:55 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/21 23:07:17 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/21 23:22:45 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fixed.hpp"
+#include "Fixed.hpp"
 
 int main( void ) {
 	Fixed a;
