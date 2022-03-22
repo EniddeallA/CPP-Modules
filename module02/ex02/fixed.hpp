@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:47:51 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/22 01:49:07 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/22 14:24:26 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ class Fixed
 		static Fixed& max( Fixed& f1, Fixed& f2);
 	private:
 		int number;
-		static const int width = 8;	
+		static const int fractional_bits = 8;	
 };
 
 std::ostream& operator<<(std::ostream &output, const Fixed& f);
