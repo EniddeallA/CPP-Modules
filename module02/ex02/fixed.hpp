@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fixed.hpp                                          :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:47:51 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/21 23:09:33 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/22 01:49:07 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ class Fixed
 
 		static const Fixed& min(const Fixed& f1, const Fixed& f2);
 		static const Fixed& max(const Fixed& f1, const Fixed& f2);
-
+		static Fixed& min( Fixed& f1, Fixed& f2);
+		static Fixed& max( Fixed& f1, Fixed& f2);
 	private:
 		int number;
 		static const int width = 8;	

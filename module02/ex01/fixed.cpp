@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:47:56 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/21 23:22:13 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/22 02:22:24 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ Fixed::Fixed( void ):
 Fixed::Fixed( const int number )
 {
 	std::cout << "\033[1;32mIntger constructor called\033[0m" << std::endl;
-	this->number = (int)(number * pow(2, this->width));
+	this->number = number << this->width;
 }
 
 Fixed::Fixed( const float number )
 {
 	std::cout << "\033[1;32mFloat constructor called\033[0m" << std::endl;
-	this->number = roundf(number * pow(2, this->width));
+	this->number = roundf(number * (1 << this->width));
 }	
 
 Fixed::Fixed( const Fixed& f )
@@ -59,11 +59,11 @@ void Fixed::setRawBits( int const raw )
 }
 
 float	Fixed::toFloat( void ) const {
-	return (float)this->number / pow(2, this->width);
+	return (float)this->number / (float)(1 << this->width);
 }
 
 int		Fixed::toInt( void ) const {
-	return this->number / pow(2, this->width);
+	return this->number >> this->width;
 }
 
 std::ostream& operator<<(std::ostream &output, const Fixed& f)

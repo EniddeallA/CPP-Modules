@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:47:56 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/22 01:23:26 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/22 02:23:37 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ Fixed::Fixed( void ):
 
 Fixed::Fixed( const int number )
 {
-	this->number = (int)(number * pow(2, this->width));
+	this->number = number << this->width;
 }
 
 Fixed::Fixed( const float number )
 {
-	this->number = roundf(number * pow(2, this->width));
+	this->number = roundf(number * (1 << this->width));
 }
 
 Fixed::Fixed( const Fixed& f )
@@ -52,11 +52,11 @@ void Fixed::setRawBits( int const raw )
 }
 
 float	Fixed::toFloat( void ) const {
-	return (float)this->number / pow(2, this->width);
+	return (float)this->number / (float)(1 << this->width);
 }
 
 int		Fixed::toInt( void ) const {
-	return this->number / pow(2, this->width);
+	return this->number >> this->width;
 }
 
 std::ostream& operator<<(std::ostream &output, const Fixed& f)
@@ -82,14 +82,14 @@ Fixed Fixed::operator - (const Fixed& f ) const
 Fixed Fixed::operator * (const Fixed& f ) const
 {
 	Fixed f1;
-	f1.setRawBits((this->number * f.number) / pow(2, this->width));
+	f1.setRawBits((this->number * f.number) >> this->width);
 	return f1;
 }
 
 Fixed Fixed::operator / (const Fixed& f ) const
 {
 	Fixed f1;
-	f1.setRawBits((this->number / f.number) * pow(2, this->width));
+	f1.setRawBits((this->number << this->width) / f.number);
 	return f1;
 }
 

@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:47:55 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/22 01:25:07 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/22 02:26:43 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int main( void )
 	Point a(0, 0);
 	Point b(20, 0);
 	Point c(10, 30);
-	Point p(10, 15);
+	Point p(10, 45);
+	// Point p(10, 15);
 	if (bsp(a, b, c, p))
 		std::cout << "Point in triangle" << std::endl;
 	else
