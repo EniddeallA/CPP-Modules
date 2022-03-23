@@ -6,14 +6,14 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 02:11:10 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 17:45:35 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/23 18:31:49 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap( void ):
-	health(10),
+	hitpoints(10),
 	energy(10),
 	damage(0)
 {
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap( void ):
 
 ClapTrap::ClapTrap( std::string name ):
 	name(name),
-	health(10),
+	hitpoints(10),
 	energy(10),
 	damage(0)
 {
@@ -40,7 +40,7 @@ ClapTrap& ClapTrap::operator = (const ClapTrap& ct)
 {
 	std::cout << "Assignement operator called" << std::endl;
 	this->name = ct.getName();
-	this->health = ct.getHealth();
+	this->hitpoints = ct.gethitpoints();
 	this->energy = ct.getEnergy();
 	this->damage = ct.getDamage();
 	return (*this);
@@ -64,9 +64,9 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	this->health -= amount;
-	if (this->health < 0)
-		this->health = 0;
+	this->hitpoints -= amount;
+	if (this->hitpoints < 0)
+		this->hitpoints = 0;
 	std::cout << "ClapTrap " << this->name << " took " << amount << " damage." << std::endl;
 }
 
@@ -74,7 +74,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->energy > 0)
 	{
-		this->health += amount;
+		this->hitpoints += amount;
 		this->energy--;
 		std::cout << "ClapTrap " << this->name << " repaired with " << amount << std::endl;
 	}
@@ -85,9 +85,9 @@ std::string ClapTrap::getName( void ) const
 	return this->name;
 }
 
-int ClapTrap::getHealth(void) const
+int ClapTrap::gethitpoints(void) const
 {
-	return this->health;
+	return this->hitpoints;
 }
 
 int ClapTrap::getEnergy(void) const
@@ -105,9 +105,9 @@ void ClapTrap::setName( std::string name )
 	this->name = name;
 }
 
-void ClapTrap::setAttrs( int health, int energy, int damage)
+void ClapTrap::setAttrs( int hitpoints, int energy, int damage)
 {
-	this->health = health;
+	this->hitpoints = hitpoints;
 	this->energy = energy;
 	this->damage = damage;
 }

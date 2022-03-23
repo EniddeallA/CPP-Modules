@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 02:43:31 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 17:46:07 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/23 18:31:49 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ ScavTrap::ScavTrap( std::string name ):
 ScavTrap::ScavTrap( const ScavTrap& ct) : ClapTrap( ct.getName() )
 {
 	std::cout << "Copy constructor called" << std::endl;
-	this->setAttrs(ct.getHealth(), ct.getEnergy(), ct.getDamage());
+	this->setAttrs(ct.gethitpoints(), ct.getEnergy(), ct.getDamage());
 }
 
 ScavTrap& ScavTrap::operator = (const ScavTrap& ct)
 {
 	std::cout << "Assignement operator called" << std::endl;
 	this->setName(ct.getName());
-	this->setAttrs(ct.getHealth(), ct.getEnergy(), ct.getDamage());
+	this->setAttrs(ct.gethitpoints(), ct.getEnergy(), ct.getDamage());
 	return (*this);
 }
 

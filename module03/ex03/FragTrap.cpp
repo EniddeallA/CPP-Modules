@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 03:38:26 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 17:45:52 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/23 18:31:49 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ FragTrap::FragTrap( std::string name ):
 FragTrap::FragTrap( const FragTrap& ct) : ClapTrap( ct.getName() )
 {
 	std::cout << "Copy constructor called" << std::endl;
-	this->setAttrs(ct.getHealth(), ct.getEnergy(), ct.getDamage());
+	this->setAttrs(ct.gethitpoints(), ct.getEnergy(), ct.getDamage());
 }
 
 FragTrap& FragTrap::operator = (const FragTrap& ct)
 {
 	std::cout << "Assignement operator called" << std::endl;
 	this->setName(ct.getName());
-	this->setAttrs(ct.getHealth(), ct.getEnergy(), ct.getDamage());
+	this->setAttrs(ct.gethitpoints(), ct.getEnergy(), ct.getDamage());
 	return (*this);
 }
 

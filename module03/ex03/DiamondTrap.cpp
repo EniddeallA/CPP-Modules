@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 03:48:07 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 17:35:24 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/23 18:31:49 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ DiamondTrap::DiamondTrap( std::string name ):
 	std::cout << "DiamondTrap Constructor called" << std::endl;
 	ClapTrap::setName(name + "_clap_name");
 	this->name = name;
-	setAttrs(FragTrap::getHealth(), ScavTrap::getEnergy() , FragTrap::getDamage());
+	setAttrs(FragTrap::gethitpoints(), ScavTrap::getEnergy() , FragTrap::getDamage());
 }
 
 DiamondTrap::DiamondTrap( const DiamondTrap& ct):
@@ -29,7 +29,7 @@ DiamondTrap::DiamondTrap( const DiamondTrap& ct):
 	std::cout << "Copy constructor called" << std::endl;
 	ClapTrap::setName(name + "_clap_name");
 	this->name = ct.getName();
-	this->setAttrs(FragTrap::getHealth(), ScavTrap::getEnergy(), FragTrap::getDamage());
+	this->setAttrs(FragTrap::gethitpoints(), ScavTrap::getEnergy(), FragTrap::getDamage());
 }
 
 DiamondTrap::~DiamondTrap( void )
@@ -39,12 +39,12 @@ DiamondTrap::~DiamondTrap( void )
 
 void DiamondTrap::guardGate( void )
 {
-	std::cout << "DiamondTrap " << this->getName() << " is now in Gate Keeper mode" << std::endl;
+	std::cout << "ScavTrap " << this->getName() << " is now in Gate Keeper mode" << std::endl;
 }
 
 void DiamondTrap::highFivesGuys( void )
 {
-	std::cout << "DiamondTrap " << this->getName() << " is requesting a high five!" << std::endl;
+	std::cout << "FragTrap " << this->getName() << " is requesting a high five!" << std::endl;
 }
 
 void DiamondTrap::whoAmI( void )

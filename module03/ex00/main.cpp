@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 02:11:11 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 03:36:59 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/23 18:31:49 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int main()
 	ct2.attack("creeper");
 	ct1.beRepaired(10);
 	ct2.beRepaired(10);
-	std::cout << ct1.getHealth() << std::endl;
-	std::cout << ct2.getHealth() << std::endl;
+	std::cout << ct1.gethitpoints() << std::endl;
+	std::cout << ct2.gethitpoints() << std::endl;
 	ct1.takeDamage(15);
 	ct2.takeDamage(15);
-	std::cout << ct1.getHealth() << std::endl;
-	std::cout << ct2.getHealth() << std::endl;
+	std::cout << ct1.gethitpoints() << std::endl;
+	std::cout << ct2.gethitpoints() << std::endl;
 	return (0);
 }
