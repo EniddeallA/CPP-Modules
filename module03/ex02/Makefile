@@ -6,16 +6,17 @@
 #    By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 14:29:23 by akhalid           #+#    #+#              #
-#    Updated: 2022/03/23 03:19:13 by akhalid          ###   ########.fr        #
+#    Updated: 2022/03/23 03:38:39 by akhalid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=			scavtrap
+NAME	=			fragtrap
 CPP 	= 			c++
 FLAGS 	= 			-std=c++98 -Wall -Wextra -Werror -g
 SRCS	=			main.cpp \
 					ClapTrap.cpp \
-					ScavTrap.cpp
+					ScavTrap.cpp \
+					FragTrap.cpp
 
 all		: 			$(NAME)
 

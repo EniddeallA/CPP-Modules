@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 02:11:10 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 02:55:35 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/23 03:46:44 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ClapTrap::ClapTrap( std::string name ):
 	energy(10),
 	damage(0)
 {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "ClapTrap Constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap& ct)
@@ -39,12 +39,7 @@ ClapTrap& ClapTrap::operator = (const ClapTrap& ct)
 
 ClapTrap::~ClapTrap( void )
 {
-	std::cout << "Destructor called" << std::endl;
-}
-
-std::string ClapTrap::getName( void ) const
-{
-	return this->name;
+	std::cout << "ClapTrap Destructor called" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
@@ -74,4 +69,24 @@ void ClapTrap::beRepaired(unsigned int amount)
 		this->energy--;
 		std::cout << "ClapTrap " << this->name << " repaired with " << amount << std::endl;
 	}
+}
+
+std::string ClapTrap::getName( void ) const
+{
+	return this->name;
+}
+
+int ClapTrap::getHealth(void) const
+{
+	return this->health;
+}
+
+int ClapTrap::getEnergy(void) const
+{
+	return this->energy;
+}
+
+int ClapTrap::getDamage(void) const
+{
+	return this->damage;
 }

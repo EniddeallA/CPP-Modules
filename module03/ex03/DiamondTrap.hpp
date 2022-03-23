@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/23 02:43:32 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 03:33:09 by akhalid          ###   ########.fr       */
+/*   Created: 2022/03/23 03:48:06 by akhalid           #+#    #+#             */
+/*   Updated: 2022/03/23 03:53:03 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class DiamondTrap : public ScavTrap, public FragTrap
 {
 	public:
-		ScavTrap( std::string name );
-		ScavTrap( const ScavTrap& ct);
-		ScavTrap& operator = (const ScavTrap& ct);
-		~ScavTrap( void );
+		DiamondTrap( std::string name );
+		DiamondTrap( const DiamondTrap& ct);
+		DiamondTrap& operator = (const DiamondTrap& ct);
+		~DiamondTrap( void );
+
 		void guardGate( void );
-		void attack(const std::string& target);
+		void highFivesGuys(void);
+		void whoAmI();
+
+	private:
+		std::string name;
 };
 
 #endif
