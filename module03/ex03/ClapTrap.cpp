@@ -6,11 +6,20 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 02:11:10 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 03:43:09 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/23 17:45:35 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap( void ):
+	health(10),
+	energy(10),
+	damage(0)
+{
+	setName("");
+	std::cout << "ClapTrap default constructor called" << std::endl;
+}
 
 ClapTrap::ClapTrap( std::string name ):
 	name(name),

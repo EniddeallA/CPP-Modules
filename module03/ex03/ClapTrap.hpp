@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 02:11:08 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 03:36:34 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/23 17:45:03 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class ClapTrap
 {
 	public:
+		ClapTrap( void );
 		ClapTrap( std::string name );
 		ClapTrap( const ClapTrap& ct);
 		ClapTrap& operator = (const ClapTrap& ct);
@@ -40,7 +41,6 @@ class ClapTrap
 		int health;
 		int energy;
 		int damage;
-		ClapTrap( void );
 };
 
 #endif

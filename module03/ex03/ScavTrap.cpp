@@ -6,11 +6,18 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 02:43:31 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 03:43:14 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/23 17:46:07 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap( void )
+{
+	ClapTrap( "" );
+	std::cout << "ScavTrap default Constructor called" << std::endl;
+	this->setAttrs(100, 50 , 20);
+}
 
 ScavTrap::ScavTrap( std::string name ):
 	ClapTrap( name )
