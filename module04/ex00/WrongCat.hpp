@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 22:26:25 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 22:29:08 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/26 22:31:25 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,6 @@ class WrongCat : public WrongAnimal
 		~WrongCat( void );
 		
 		void makeSound( void ) const;
-		
-		std::string getType( void ) const;
-		void setType( std::string type );
-
-	protected:
-		std::string type;
 };
 
 #endif

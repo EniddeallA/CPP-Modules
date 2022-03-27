@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 22:26:24 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 22:28:17 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/26 22:33:35 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,24 @@
 WrongAnimal::WrongAnimal( void )
 {
 	std::cout << "WrongAnimal constructor called." << std::endl;
-	setType("WrongAnimal");
 }
 
-WrongAnimal::WrongAnimal( const WrongAnimal& a )
+WrongAnimal::WrongAnimal( std::string type ):
+	type(type)
+{
+	std::cout << "WrongAnimal constructor called." << std::endl;
+}
+
+WrongAnimal::WrongAnimal( const WrongAnimal& a ):
+	type(a.type)
 {
 	std::cout << "WrongAnimal copy constructor called." << std::endl;
-	*this = a;
 }
 
 WrongAnimal& WrongAnimal::operator = ( const WrongAnimal& a )
 {
 	std::cout << "WrongAnimal Assignment operator called." << std::endl;
-	this->type = a.getType();
+	this->type = a.type;
 	return (*this);
 }
 
@@ -41,12 +46,7 @@ void WrongAnimal::makeSound( void ) const
 	std::cout << "WrongAnimal sound." << std::endl;
 }
 
-std::string WrongAnimal::getType( void ) const
+std::string WrongAnimal::getWrongType( void ) const
 {
 	return this->type;
-}
-
-void WrongAnimal::setType( std::string type )
-{
-	this->type = type;
 }

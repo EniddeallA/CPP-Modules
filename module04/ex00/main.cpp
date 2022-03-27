@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 21:25:12 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 22:33:42 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/26 22:34:10 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main()
 
 	WrongAnimal *wa = new WrongCat();
 
-	std::cout << wa->getType() << " " << std::endl;
+	std::cout << wa->getWrongType() << " " << std::endl;
 	wa->makeSound();
 	delete wa;
 	return 0;

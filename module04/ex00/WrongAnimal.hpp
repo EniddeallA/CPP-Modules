@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 22:26:25 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 22:27:40 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/26 22:32:14 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ class WrongAnimal
 {
 	public:
 		WrongAnimal( void );
+		WrongAnimal( std::string type );
 		WrongAnimal( const WrongAnimal& a );
 		WrongAnimal& operator = ( const WrongAnimal& a );
 		~WrongAnimal( void );
 		
 		void makeSound( void ) const;
 		
-		std::string getType( void ) const;
-		void setType( std::string type );
+		std::string getWrongType( void ) const;
 
 	protected:
 		std::string type;

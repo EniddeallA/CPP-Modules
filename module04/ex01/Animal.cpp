@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 21:25:40 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 22:18:15 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/26 22:34:06 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,24 @@
 Animal::Animal( void )
 {
 	std::cout << "Animal constructor called." << std::endl;
-	setType("Animal");
 }
 
-Animal::Animal( const Animal& a )
+Animal::Animal( std::string type ):
+	type(type)
+{
+	std::cout << "Animal constructor called." << std::endl;
+}
+
+Animal::Animal( const Animal& a ):
+	type(a.type)
 {
 	std::cout << "Animal copy constructor called." << std::endl;
-	*this = a;
 }
 
 Animal& Animal::operator = ( const Animal& a )
 {
 	std::cout << "Animal Assignment operator called." << std::endl;
-	this->type = a.getType();
+	this->type = a.type;
 	return (*this);
 }
 
@@ -44,9 +49,4 @@ void Animal::makeSound( void ) const
 std::string Animal::getType( void ) const
 {
 	return this->type;
-}
-
-void Animal::setType( std::string type )
-{
-	this->type = type;
 }

@@ -5,17 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/23 22:36:15 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/23 22:37:43 by akhalid          ###   ########.fr       */
+/*   Created: 2022/03/26 22:35:46 by akhalid           #+#    #+#             */
+/*   Updated: 2022/03/27 15:55:48 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef BRAIN_CPP
+# define BRAIN_CPP
+
+#include "iostream"
 
 class Brain
 {
-	
+	public:
+		Brain( void );
+		Brain( const Brain& b);
+		Brain& operator = (const Brain& b);
+		~Brain( void );
+
+		std::string ideas[100];
 };
 
-# endif
+#endif
