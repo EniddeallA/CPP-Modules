@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 03:06:18 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/28 03:19:44 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/28 16:11:41 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ class Cure : public AMateria
 {
 	public:
 		Cure( void );
+		Cure(const Cure& c);
+		Cure& operator = (const Cure& c);
 		~Cure( void );
+
 		AMateria* clone() const;
 		void use(ICharacter& target);
 	

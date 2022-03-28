@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 03:06:20 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/28 16:01:41 by akhalid          ###   ########.fr       */
+/*   Created: 2022/03/28 16:04:38 by akhalid           #+#    #+#             */
+/*   Updated: 2022/03/28 17:05:30 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
-
 #include "AMateria.hpp"
 
-class Ice : public AMateria
+AMateria::AMateria(std::string const & type):
+	type(type)
 {
-	public:
-		Ice( void );
-		Ice(const Ice& i);
-		Ice& operator = (const Ice& i);
-		~Ice( void );
+	std::cout << "AMateria constructor called." << std::endl;
+}
 
-		AMateria* clone() const;
-		void use(ICharacter& target);
-};
+AMateria::~AMateria(){}
 
-#endif
+std::string const & AMateria::getType() const
+{
+	return this->type;
+}

@@ -6,9 +6,15 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 02:51:52 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/28 02:52:09 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/28 16:53:34 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "MateriaSource.hpp"
+#include "Character.hpp"
+#include "AMateria.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 int main()
 {
