@@ -6,18 +6,15 @@
 #    By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 14:29:23 by akhalid           #+#    #+#              #
-#    Updated: 2022/03/27 16:38:11 by akhalid          ###   ########.fr        #
+#    Updated: 2022/03/27 16:38:29 by akhalid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=			Abstract
+NAME	=			Interface
 CPP 	= 			c++
 FLAGS 	= 			-std=c++98 -Wall -Wextra -Werror -g
 SRCS	=			main.cpp \
-					Animal.cpp \
-					Cat.cpp \
-					Dog.cpp \
-					Brain.cpp
+					
 
 all		: 			$(NAME)
 

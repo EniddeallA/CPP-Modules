@@ -5,27 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/23 02:11:11 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/26 21:54:43 by akhalid          ###   ########.fr       */
+/*   Created: 2022/03/27 16:39:08 by akhalid           #+#    #+#             */
+/*   Updated: 2022/03/27 16:39:25 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-
 int main()
 {
-	ClapTrap ct1("creeper");
-	ClapTrap ct2("sopu");
-	
-	ct1.attack("sopu");
-	ct2.attack("creeper");
-	ct1.beRepaired(10);
-	ct2.beRepaired(10);
-	std::cout << ct1.gethitpoints() << std::endl;
-	std::cout << ct2.gethitpoints() << std::endl;
-	ct1.takeDamage(15);
-	ct2.takeDamage(15);
-	std::cout << ct1.gethitpoints() << std::endl;
-	std::cout << ct2.gethitpoints() << std::endl;
-	return (0);
+	IMateriaSource* src = new MateriaSource();
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
+	ICharacter* me = new Character("me");
+	AMateria* tmp;
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
+	ICharacter* bob = new Character("bob");
+	me->use(0, *bob);
+	me->use(1, *bob);
+	delete bob;
+	delete me;
+	delete src;
+	return 0;
 }
