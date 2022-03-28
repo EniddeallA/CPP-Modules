@@ -6,13 +6,13 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 16:19:07 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/28 20:18:57 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/28 20:25:40 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice( void ): AMateria("cure")
+Ice::Ice( void ): AMateria("ice")
 {
 	std::cout << "Ice constructor called." << std::endl;
 }

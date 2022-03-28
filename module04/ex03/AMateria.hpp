@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 02:50:30 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/28 20:17:22 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/28 20:35:55 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class ICharacter;
 class AMateria
 {
 	protected:
-		std::string const & type;
+		std::string const type;
 
 		AMateria(std::string const & type);
 		AMateria(const AMateria& am);

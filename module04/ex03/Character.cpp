@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 16:20:41 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/28 16:51:12 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/28 20:28:45 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Character& Character::operator = (const Character& c)
 
 Character::~Character()
 {
-	std::cout << "Character desstructor called." << std::endl;
+	std::cout << "Character destructor called." << std::endl;
 }
 
 
