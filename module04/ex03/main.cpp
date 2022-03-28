@@ -5,10 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/27 16:39:08 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/27 16:39:25 by akhalid          ###   ########.fr       */
+/*   Created: 2022/03/28 02:51:52 by akhalid           #+#    #+#             */
+/*   Updated: 2022/03/28 20:18:14 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "MateriaSource.hpp"
+#include "Character.hpp"
+#include "AMateria.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 int main()
 {

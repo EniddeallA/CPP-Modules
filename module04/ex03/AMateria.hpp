@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/27 16:40:26 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/27 16:43:07 by akhalid          ###   ########.fr       */
+/*   Created: 2022/03/28 02:50:30 by akhalid           #+#    #+#             */
+/*   Updated: 2022/03/28 20:17:22 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,23 @@
 
 #include "ICharacter.hpp"
 
+class ICharacter;
+
 class AMateria
 {
 	protected:
+		std::string const & type;
+
+		AMateria(std::string const & type);
+		AMateria(const AMateria& am);
+		AMateria& operator = (const AMateria& am);
 		
 	public:
-		AMateria(std::string const & type);
-		
-		std::string const & getType() const; //Returns the materia type
+		virtual ~AMateria();
+
+		std::string const & getType() const;
 		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target);
+		virtual void use(ICharacter& target) = 0;
 };
 
 #endif

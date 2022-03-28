@@ -5,21 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/27 16:44:31 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/27 16:46:38 by akhalid          ###   ########.fr       */
+/*   Created: 2022/03/28 03:06:18 by akhalid           #+#    #+#             */
+/*   Updated: 2022/03/28 20:17:29 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CURE_HPP
 # define CURE_HPP
 
-class Cure
+#include "AMateria.hpp"
+
+class Cure : public AMateria
 {
-	private:
-		
 	public:
 		Cure( void );
+		Cure(const Cure& c);
+		Cure& operator = (const Cure& c);
 		~Cure( void );
+
+		AMateria* clone() const;
+		void use(ICharacter& target);
+	
 };
 
 #endif
