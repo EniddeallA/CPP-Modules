@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 21:25:12 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/27 16:26:24 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/29 07:35:44 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 int main()
 {
+	//Animal test; Compile error. Can't initiate abstract class
+
 	Animal* j = new Dog();
 	Animal* i = new Cat();
 
@@ -31,10 +33,12 @@ int main()
 	std::cout << std::endl << "Deep copy brain test:\n" << std::endl;
 
 	Cat c;
-	Cat cc(c);
+	{
+		Cat cc(c);
+	}
 
-	std::cout << c.getBrain() << std::endl;
-	std::cout << cc.getBrain() << std::endl;
+	std::cout << c.getBrain()->ideas[0] << std::endl;
+	// std::cout << cc.getBrain() << std::endl;
 
 	return 0;
 }

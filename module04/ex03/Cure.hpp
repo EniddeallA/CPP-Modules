@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 03:06:18 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/28 20:17:29 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/29 06:51:30 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class Cure : public AMateria
 
 		AMateria* clone() const;
 		void use(ICharacter& target);
-	
 };
 
 #endif

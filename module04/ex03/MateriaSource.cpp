@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 16:43:23 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/28 20:36:59 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/29 06:50:26 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ MateriaSource& MateriaSource::operator = (const MateriaSource& ms)
 
 MateriaSource::~MateriaSource( void )
 {
+	for (int i = 0; i < 4; i++)
+		if (materia[i])
+			delete materia[i];
 	std::cout << "MateriaSource destructor called." << std::endl;
 }
 
@@ -56,7 +59,6 @@ void MateriaSource::learnMateria(AMateria* m)
 			materia[i] = m->clone();
 			break;
 		}
-	
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
