@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:13:57 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/31 04:55:42 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/31 04:58:17 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,41 +15,23 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
 	try
 	{
-		Bureaucrat b("creeper", 137);
-		ShrubberyCreationForm scf("home");
-		b.signForm(scf);
-		b.executeForm(scf);
-	} 
-	catch(std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
+		Intern someRandomIntern;
+		Form* rrf;
+
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		std::cout << *rrf << std::endl;
+
+		Bureaucrat b("creeper", 1);
+		b.signForm(*rrf);
+		b.executeForm(*rrf);
 	}
-	std::cout << std::endl;
-	try
-	{
-		Bureaucrat b("creeper", 72);
-		RobotomyRequestForm rrf("home");
-		b.signForm(rrf);
-		b.executeForm(rrf);
-	} 
-	catch(std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	std::cout << std::endl;
-	try
-	{
-		Bureaucrat b("creeper", 5);
-		PresidentialPardonForm ppf("home");
-		b.signForm(ppf);
-		b.executeForm(ppf);
-	} 
-	catch(std::exception& e)
+	catch(const std::exception& e)
 	{
 		std::cout << e.what() << std::endl;
 	}
