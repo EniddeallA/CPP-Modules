@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 21:25:12 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/29 07:35:44 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/31 01:05:52 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,27 +18,26 @@ int main()
 {
 	//Animal test; Compile error. Can't initiate abstract class
 
-	Animal* j = new Dog();
-	Animal* i = new Cat();
+	Animal* a[10];
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	
-	i->makeSound();
-	j->makeSound();
+	for (int i = 0; i < 5; i++)
+		a[i] = new Dog();
+	for (int i = 5; i < 10; i++)
+		a[i] = new Cat();
 
-	delete i;
-	delete j;
+	for (int i = 0; i < 10; i++)
+		delete a[i];
 
 	std::cout << std::endl << "Deep copy brain test:\n" << std::endl;
 
 	Cat c;
+	Dog d;
 	{
 		Cat cc(c);
+		Dog dd(d);
 	}
 
 	std::cout << c.getBrain()->ideas[0] << std::endl;
-	// std::cout << cc.getBrain() << std::endl;
-
+	std::cout << d.getBrain()->ideas[0] << std::endl;
 	return 0;
 }
