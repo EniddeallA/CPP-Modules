@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:13:58 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/31 02:42:19 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/03/31 02:35:09 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,13 @@
 # define BUREAUCRAT_HPP
 
 #include "iostream"
+#include "GradeTooHighExcept.hpp"
+#include "GradeTooLowExcept.hpp"
+#include "Form.hpp"
 
-class GradeTooLowExcept: public std::exception
-{
-	virtual const char* what() const throw()
-	{
-		return "Grade too low exception.";
-	};
-};
-
-class GradeTooHighExcept: public std::exception
-{
-	virtual const char* what() const throw()
-	{
-		return "Grade too high exception.";
-	};
-};
+class GradeTooHighExcept;
+class GradeTooLowExcept;
+class Form;
 
 class Bureaucrat
 {
@@ -52,6 +43,7 @@ class Bureaucrat
 		void incrementGrade( void );
 		void decrementGrade( void );
 
+		void signForm( Form& f);
 };
 
 std::ostream& operator << (std::ostream& os, const Bureaucrat& b);
