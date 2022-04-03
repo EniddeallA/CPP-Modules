@@ -6,25 +6,18 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 04:25:42 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/31 04:46:45 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/04/03 23:15:36 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
 
 Intern::Intern( void )
-{
-	this->forms[0] = "shrubbery creation";
-	this->forms[1] = "robotomy request";
-	this->forms[2] = "presidential pardon";
-}
+{}
 
 Intern::Intern( const Intern& i )
 {
 	(void)i;
-	this->forms[0] = "shrubbery creation";
-	this->forms[1] = "robotomy request";
-	this->forms[2] = "presidential pardon";
 }
 
 Intern& Intern::operator = ( const Intern& i )
@@ -38,31 +31,33 @@ Intern::~Intern( void )
 	
 }
 
+Form* Intern::newShrubberyForm(std::string target)
+{
+	return (new ShrubberyCreationForm(target));
+}
+
+Form* Intern::newRobotomyForm(std::string target)
+{
+	return (new RobotomyRequestForm(target));
+}
+
+Form* Intern::newPresidentialForm(std::string target)
+{
+	return (new PresidentialPardonForm(target));
+}
+
 Form* Intern::makeForm(std::string name, std::string target)
 {
 	Form *f = NULL;
-	int i;
 
-	for (i = 0; i < 3; i++)
-		if (forms[i] == name)
-			break;
-	switch (i)
+	Form* (Intern::*ptr)(std::string) = NULL;
+	!name.compare("shrubbery creation") ? (ptr = &Intern::newShrubberyForm) : NULL;
+	!name.compare("robotomy request") ? (ptr = &Intern::newRobotomyForm) : NULL;
+	!name.compare("presidential pardon") ? (ptr = &Intern::newPresidentialForm) : NULL;
+	if (ptr)
 	{
-		case 0:
-			f = new ShrubberyCreationForm(target);
-			std::cout << "Intern creates " << *f << std::endl;
-			break;
-		case 1:
-			f = new RobotomyRequestForm(target);
-			std::cout << "Intern creates " << *f << std::endl;
-			break;
-		case 2:
-			f = new PresidentialPardonForm(target);
-			std::cout << "Intern creates " << *f << std::endl;
-			break;
-		default:
-			std::cout << "Unkown form." << std::endl;
-			break;
+		f = (this->*ptr)(target);
+		std::cout << "Intern creates " << *f << std::endl;
 	}
 	return f;
 }

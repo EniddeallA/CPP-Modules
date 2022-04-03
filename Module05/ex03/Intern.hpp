@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 04:25:41 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/31 04:37:18 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/04/03 23:14:22 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,6 @@
 
 class Intern
 {
-	private:
-		std::string forms[3];
-
 	public:
 		Intern( void );
 		Intern( const Intern& i );
@@ -30,7 +27,9 @@ class Intern
 		~Intern( void );
 
 		Form* makeForm(std::string name, std::string target);
-
+		Form* newShrubberyForm(std::string target);
+		Form* newRobotomyForm(std::string target);
+		Form* newPresidentialForm(std::string target);
 };
 
 #endif

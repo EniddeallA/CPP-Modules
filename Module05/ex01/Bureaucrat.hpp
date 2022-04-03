@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:13:58 by akhalid           #+#    #+#             */
-/*   Updated: 2022/03/31 02:35:09 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/04/03 22:56:15 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 #include "GradeTooLowExcept.hpp"
 #include "Form.hpp"
 
-class GradeTooHighExcept;
-class GradeTooLowExcept;
 class Form;
 
 class Bureaucrat
