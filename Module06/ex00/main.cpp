@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 02:11:02 by akhalid           #+#    #+#             */
-/*   Updated: 2022/04/05 01:59:37 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/04/09 00:28:58 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void putFloat(float n, bool impossible, std::string val)
 		std::cout << val[0] << "inff";
 	else
 	{
-		if (impossible)
+		if (impossible  || val == "inf" || val == "inff")
 			std::cout << "impossible";
 		else
 		{
@@ -75,7 +75,7 @@ void putDouble(double n, bool impossible, std::string val)
 		std::cout << val[0] << "inf";
 	else
 	{
-		if (impossible)
+		if (impossible  || val == "inf" || val == "inff")
 			std::cout << "impossible";
 		else
 		{

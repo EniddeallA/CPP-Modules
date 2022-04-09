@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 02:11:02 by akhalid           #+#    #+#             */
-/*   Updated: 2022/04/09 00:02:51 by akhalid          ###   ########.fr       */
+/*   Updated: 2022/04/09 00:30:55 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ int main()
 
 	uintptr_t serialized = serialize(ptr);
 	Data *deserialized = deserialize(serialized);
-
-	std::cout << &serialized << std::endl;
 	
 	std::cout << deserialized << std::endl;
 	std::cout << ptr << std::endl;
