@@ -6,12 +6,12 @@
 #    By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 02:10:52 by akhalid           #+#    #+#              #
-#    Updated: 2022/04/05 02:00:13 by akhalid          ###   ########.fr        #
+#    Updated: 2022/04/09 00:23:25 by akhalid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=			sacalar
-CPP 	= 			clang++
+NAME	=			scalar
+CPP 	= 			c++
 FLAGS 	= 			-std=c++98 -Wall -Wextra -Werror -g
 SRCS	=			main.cpp
 					
