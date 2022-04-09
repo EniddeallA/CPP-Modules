@@ -1,28 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 17:15:20 by akhalid           #+#    #+#             */
-/*   Updated: 2022/04/08 23:59:15 by akhalid          ###   ########.fr       */
+/*   Created: 2022/04/09 00:05:04 by akhalid           #+#    #+#             */
+/*   Updated: 2022/04/09 00:19:22 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATA_HPP
-# define DATA_HPP
-
-class Data
+class Base
 {
 	public:
-		Data( void );
-		Data( int a );
-		Data( const Data& d);
-		Data& operator = (const Data& d);
-		~Data( void );
+		Base(void ){};
+		virtual ~Base( void ){};
 
-		int a;
 };
 
-#endif
+class A : public Base
+{
+	public:
+		A( void ){};
+		~A( void ){};
+};
+
+class B : public Base
+{
+	public:
+		B( void ){};
+		~B( void ){};
+};
+
+class C : public Base
+{
+	public:
+		C( void ){};
+		~C( void ){};
+};
+
+
+Base * generate(void);
+void identify(Base* p);
+void identify(Base& p);
