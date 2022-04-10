@@ -1,34 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   MutantStack.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 05:55:57 by akhalid           #+#    #+#             */
-/*   Updated: 2022/04/10 06:43:37 by akhalid          ###   ########.fr       */
+/*   Created: 2022/04/10 06:49:53 by akhalid           #+#    #+#             */
+/*   Updated: 2022/04/10 06:49:59 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Span.hpp"
-
-int main()
-{
-	try
-	{
-		Span sp = Span(10000);
-		std::vector<int> vec;
-		for (int i = 1; i < 10000; i++)
-			vec.push_back(i);		
-		sp.addNumbers(vec.begin(), vec.end());
-		sp.addNumber(10010);
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
-	}
-	catch(std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	
-	return 0;
-}
+#include "MutantStack.hpp"

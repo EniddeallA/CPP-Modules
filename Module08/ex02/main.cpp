@@ -5,30 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 05:55:57 by akhalid           #+#    #+#             */
-/*   Updated: 2022/04/10 06:43:37 by akhalid          ###   ########.fr       */
+/*   Created: 2022/04/10 06:45:17 by akhalid           #+#    #+#             */
+/*   Updated: 2022/04/10 06:48:48 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Span.hpp"
+#include "MutantStack.hpp"
 
 int main()
 {
-	try
+	MutantStack<int> mstack;
+	mstack.push(5);
+	mstack.push(17);
+	std::cout << mstack.top() << std::endl;
+	mstack.pop();
+	std::cout << mstack.size() << std::endl;
+	mstack.push(3);
+	mstack.push(5);
+	mstack.push(737);
+	mstack.push(0);
+	MutantStack<int>::iterator it = mstack.begin();
+	MutantStack<int>::iterator ite = mstack.end();
+	++it;
+	--it;
+	while (it != ite)
 	{
-		Span sp = Span(10000);
-		std::vector<int> vec;
-		for (int i = 1; i < 10000; i++)
-			vec.push_back(i);		
-		sp.addNumbers(vec.begin(), vec.end());
-		sp.addNumber(10010);
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
+		std::cout << *it << std::endl;
+		++it;
 	}
-	catch(std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	
+	std::stack<int> s(mstack);
 	return 0;
 }

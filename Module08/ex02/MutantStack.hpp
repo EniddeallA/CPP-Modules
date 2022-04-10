@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 05:55:57 by akhalid           #+#    #+#             */
-/*   Updated: 2022/04/10 06:43:37 by akhalid          ###   ########.fr       */
+/*   Created: 2022/04/10 06:45:15 by akhalid           #+#    #+#             */
+/*   Updated: 2022/04/10 06:50:49 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Span.hpp"
+#ifndef MUTANTSTACK_HPP
+# define MUTANTSTACK_HPP
 
-int main()
+# include <stack>
+# include <vector>
+
+template <typename T>
+class MutantStack : public std::stack<T>
 {
-	try
-	{
-		Span sp = Span(10000);
-		std::vector<int> vec;
-		for (int i = 1; i < 10000; i++)
-			vec.push_back(i);		
-		sp.addNumbers(vec.begin(), vec.end());
-		sp.addNumber(10010);
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
-	}
-	catch(std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	
-	return 0;
-}
+	private:
+		std::vector<t> elements;		
+
+	public:
+		MutantStack( void );
+		~MutantStack( void );
+
+};
+
+#endif
