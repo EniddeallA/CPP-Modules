@@ -61,12 +61,12 @@ void MutantStack<T>::pop( void )
 	elements.resize(std::stack<T>::size());
 }
 
-template <typename T> typename MutantStack<T>::iterator MutantStack<T>::begin( void )
+template <typename T> MutantStack<T>::iterator MutantStack<T>::begin( void )
 {
 	return (MutantStack<T>::iterator(&elements[0]));
 }
 
-template <typename T> typename MutantStack<T>::iterator MutantStack<T>::end( void )
+template <typename T> MutantStack<T>::iterator MutantStack<T>::end( void )
 {
 	return (MutantStack<T>::iterator(&elements[elements.size()]));
 }
