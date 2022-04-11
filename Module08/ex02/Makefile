@@ -6,14 +6,15 @@
 #    By: akhalid <akhalid@student.1337.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 02:10:52 by akhalid           #+#    #+#              #
-#    Updated: 2022/04/10 06:45:10 by akhalid          ###   ########.fr        #
+#    Updated: 2022/04/11 01:21:21 by akhalid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=			MutantStack
 CPP 	= 			c++
 FLAGS 	= 			-std=c++98 -Wall -Wextra -Werror -g
-SRCS	=			main.cpp
+SRCS	=			main.cpp \
+					MutantStack.cpp
 
 all		: 			$(NAME)
 
