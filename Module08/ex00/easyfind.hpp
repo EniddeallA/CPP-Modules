@@ -15,9 +15,9 @@
 #include <algorithm>
 
 template <class T>
-typename T::iterator easyfind(T container, int o)
+T::iterator easyfind(T container, int o)
 {
-	typename T::iterator it = std::find(container.begin(), container.end(), o);
+	T::iterator it = std::find(container.begin(), container.end(), o);
 	if (it == container.end())
 		throw std::exception();
 	else 
